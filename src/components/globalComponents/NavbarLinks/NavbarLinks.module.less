@@ -1,0 +1,26 @@
+@import '../../../less/index.less';
+
+.LinkContainer {
+  .custom-layout(space-evenly, center);
+  flex-direction: column;
+  width: 150px;
+  height: 20vh;
+  /*display: none;*/
+  /*border: @showMe;*/
+  .navLink {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 3rem;
+    color: @mainGreen;
+    cursor: pointer;
+    .transition(all .5s linear);
+    &:hover {
+      color: @mainPink;
+    }
+  }
+}
+/*.show {*/
+  /*display: flex;*/
+  /*.transition(all .5s ease-in-out);*/
+/*}*/
+

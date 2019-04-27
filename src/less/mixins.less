@@ -1,0 +1,57 @@
+//CENTER WITH FLEXBOX
+.center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// GIVE IT JUSTIFY-CONTENT AND ALIGN-ITEMS TO GO
+.custom-layout(@justify, @align) {
+  display: flex;
+  justify-content: @justify;
+  align-items: @align;
+}
+
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.button-creator(@width, @height, @bg-color, @font-color, @font-size) {
+  .border-radius(15px);
+  .center;
+  width: @width;
+  height: @height;
+  background: @bg-color;
+  color: @font-color;
+	border: 2px solid @font-color;
+  cursor: pointer;
+  font-size: @font-size;
+  &:hover {
+    background: @font-color;
+    color: @bg-color;
+		border: 2px solid @bg-color;
+  }
+}
+
+.custom-btn(@width, @height, @color, @background-color) {
+  width: @width;
+  height: @height;
+	color: @color;
+  background-color: @background-color;
+  cursor: pointer;
+
+  &:hover {
+    color: @background-color;
+    background-color: @color;
+    border: 1px solid @background-color;
+  }
+}
+
+.grid(@display, @gtc, @gtr, @gg) {
+	display: @display;
+	grid-template-columns: @gtc;
+	grid-template-rows: @gtr;
+	grid-gap: @gg;
+}

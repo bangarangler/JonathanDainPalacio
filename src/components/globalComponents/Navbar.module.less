@@ -1,0 +1,47 @@
+@import '../../less/index.less';
+
+
+.nav {
+  .custom-layout(center, center);
+  flex-direction: column;
+  /*border: @showMe3;*/
+  .navText {
+    color: @mainBlack;
+  }
+}
+
+.NavContainer {
+  /*width: 150px;*/
+  /*border: @showMe;*/
+  .custom-layout(space-evenly, center);
+  flex-direction: column;
+  height: 100vh;
+  background: @mainBlack;
+  .transition(all 1s linear);
+  display: none;
+}
+.toggleNav {
+  font-size: 5rem;
+  .custom-layout(center, center);
+  margin: 0 auto;
+  width: 100%;
+  /*width: 150px;*/
+  /*background: @mainBlack;*/
+  color: @mainGreen;
+  cursor: pointer;
+  &:hover {
+    color: @mainPink;
+  }
+}
+.show {
+display: flex;
+z-index: -1000;
+}
+
+.change {
+  background: @mainBlack;
+}
+
+
+
+
