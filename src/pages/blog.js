@@ -8,6 +8,7 @@ import Img from "gatsby-image"
 import Banner from "../components/Banner/Banner.js"
 import blogImg from "../images/bgHero/beachHero.jpg"
 import moment from "moment"
+import styles from "./Blog.module.less"
 
 class BlogPage extends React.Component {
   render() {
@@ -26,16 +27,22 @@ class BlogPage extends React.Component {
         {posts.map(({ node }) => {
           const title = node.title || node.slug
           return (
-            <div key={node.slug}>
-              <div>
+            <div key={node.slug} className={styles.PreviewContainer}>
+              <div className={styles.ImagePreviewContainer}>
                 <Img fluid={node.image.fluid} />
               </div>
-              <h3>
-                <Link to={node.slug}>{title}</Link>
-              </h3>
-              <p>{node.subTitle}</p>
-              <small>{moment(node.postedOn).calendar()}</small>
-              <p>{node.author}</p>
+              <div className={styles.HeadingLinkContainer}>
+                <h3>
+                  <Link to={node.slug}>{title}</Link>
+                </h3>
+              </div>
+              <div className={styles.ContentPreviewContainer}>
+                <p className={styles.subtitle}>{node.subTitle}</p>
+                <small className={styles.postedOn}>
+                  {moment(node.postedOn).calendar()}
+                </small>
+                <p className={styles.author}>{node.author}</p>
+              </div>
             </div>
           )
         })}

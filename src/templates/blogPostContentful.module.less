@@ -1,0 +1,77 @@
+@import '../less/index.less';
+
+.PostWrapper {
+  .grid(grid, 1fr, 1fr, 2rem);
+  place-items: center;
+  grid-template-areas:
+  'img'
+  'headings'
+  'post'
+  'links';
+  .PostImageContainer {
+    grid-area: img;
+    height: 40vh;
+    width: 100%;
+    overflow: hidden;
+    .PostImage {
+      max-height: 40vh;
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+  .PostHeadings {
+    grid-area: headings;
+    text-align: center;
+    .Heading {
+      font-size: 4rem;
+      color: @mainGreen;
+      letter-spacing: .1rem;
+      text-transform: uppercase;
+      margin-bottom: 5%;
+      @media (min-width: 768px) {
+        font-size: 6rem;
+        letter-spacing: .3rem;
+      }
+    }
+    .subtitle {
+      color: @mainPurple;
+      font-size: 3rem;
+      font-family: @stylishText;
+      text-transform: capitalize;
+      letter-spacing: .1rem;
+      @media (min-width: 768px) {
+        font-size: 4rem;
+        letter-spacing: .3rem;
+      }
+    }
+  }
+  .dangerous {
+    grid-area: post;
+    text-align: center;
+    margin: 0 auto;
+    @media (min-width: 768px) {
+      font-size: 3rem;
+      max-width: 70%;
+    }
+  }
+  .ULPost {
+    grid-area: links;
+    margin-bottom: 5%;
+    ul {
+      .custom-layout(center, center);
+      flex-direction: column;
+    }
+    li {
+      text-align: center;
+      margin: 2% auto;
+      a {
+        text-decoration: none;
+        font-size: 2rem;
+        color: @mainGreen;
+        @media (min-width: 768px) {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}

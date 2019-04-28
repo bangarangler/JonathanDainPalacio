@@ -1,0 +1,78 @@
+@import '../less/index.less';
+
+.PreviewContainer {
+  .grid(grid, 1fr, 1fr, 1rem);
+  place-items: center;
+  grid-template-areas:
+  "img"
+  'title'
+  'info';
+  .ImagePreviewContainer {
+    grid-area: img;
+    width: 100%;
+    height: 40vh;
+    overflow: hidden;
+    object-fit: contain;
+    /*.custom-layout(center, center);*/
+    img {
+      object-fit: cover;
+      max-height: 40vh;
+      max-width: 100%;
+    }
+  }
+  .HeadingLinkContainer {
+    grid-area: title;
+      a {
+        text-decoration: none;
+        color: @mainGreen;
+        font-size: 3.7rem;
+        letter-spacing: .1rem;
+        text-transform: uppercase;
+        text-decoration: underline;
+        cursor: pointer;
+        @media (min-width: 768px) {
+          font-size: 5rem;
+          letter-spacing: .3rem;
+        }
+    }
+  }
+  .ContentPreviewContainer {
+    grid-area: info;
+    text-align: center;
+    .custom-layout(space-evenly, center);
+    flex-direction: column;
+    /*border: @showMe;*/
+    height: 30vh;
+    .subtitle {
+      font-size: 2rem;
+      color: @mainGrey;
+      text-transform: capitalize;
+      letter-spacing: .2rem;
+      @media (min-width: 768px) {
+        font-size: 3.5rem;
+        letter-spacing: .4rem;
+      }
+    }
+    .postedOn {
+      color: @mainPurple;
+      font-size: 2rem;
+      letter-spacing: .2rem;
+      font-family: @stylishText;
+      @media (min-width: 768px) {
+        font-size: 3.2rem;
+      }
+    }
+    .author {
+      color: @mainGreen;
+      font-size: 3rem;
+      letter-spacing: .3rem;
+      margin-bottom: 0;
+      @media (min-width: 768px) {
+        font-size: 5rem;
+      }
+    }
+  }
+}
+
+
+
