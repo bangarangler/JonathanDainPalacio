@@ -7,6 +7,8 @@ import { PageHeader } from "../components/Header/Header.js"
 import Img from "gatsby-image"
 import Banner from "../components/Banner/Banner.js"
 import blogImg from "../images/bgHero/beachHero.jpg"
+import { Section } from "../components/Section/Section.js"
+import { SectionTitle } from "../components/Section/SectionTitle.js"
 import moment from "moment"
 import styles from "./Blog.module.less"
 
@@ -24,6 +26,9 @@ class BlogPage extends React.Component {
         <PageHeader img={blogImg}>
           <Banner title="web development" subtitle="whats new with coding?" />
         </PageHeader>
+        <Section>
+          <SectionTitle title="jon" message="ponderings and expertise from" />
+        </Section>
         {posts.map(({ node }) => {
           const title = node.title || node.slug
           return (
