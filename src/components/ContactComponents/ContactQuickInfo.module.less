@@ -1,0 +1,59 @@
+@import '../../less/index.less';
+
+.ContactQuickInfoContainer {
+  /*border: @showMe;*/
+  .custom-layout(center, center);
+  padding: 2rem;
+  width: 90%;
+  margin: 0 auto;
+  flex-direction: column;
+  .bioContainer {
+    .custom-layout(center, center);
+    flex-direction: column;
+    .bio {
+      color: @mainPurple;
+      font-size: 4rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-transform: uppercase;
+      text-decoration: underline;
+      .letterSpacing(.3rem);
+      &:hover {
+        color: @mainPink;
+      }
+    }
+    .chevron {
+      font-size: 7rem;
+      color: @mainPurple;
+      &:hover {
+        color: @mainPink;
+        cursor: pointer;
+      }
+    }
+  }
+  .ContactPText {
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: .1rem;
+  line-height: 4rem;
+  padding: 1rem;
+  color: @mainWhite;
+  background: @mainPurple;
+  opacity: .7;
+  }
+  .ps {
+    font-family: @stylishText;
+    background: @mainPurple;
+    opacity: .7;
+    padding: 1rem;
+    text-align: center;
+    color: @mainWhite;
+    font-size: 1.8rem;
+    .letterSpacing(.2rem);
+    .important {
+      text-decoration: underline;
+      font-weight: 700;
+    }
+  }
+
+}

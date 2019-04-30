@@ -11,9 +11,16 @@
   }
   .flexIt {
     .custom-layout(center, center);
+    flex-direction: column;
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
     img {
       max-width: 50px;
       max-height: 50px;
+      @media (min-width: 768px) {
+        margin-left: 5%;
+      }
     }
   }
 
