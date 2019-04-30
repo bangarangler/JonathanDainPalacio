@@ -12,7 +12,7 @@ const ContactQuickInfo = props => {
   React.useEffect(() => {
     function showOnBig() {
       setWidth(document.body.clientWidth)
-      if (width > 768) {
+      if (width >= 768) {
         setBio(true)
       } else {
         setBio(false)
