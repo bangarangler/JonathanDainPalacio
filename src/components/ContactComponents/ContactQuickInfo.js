@@ -31,7 +31,7 @@ const ContactQuickInfo = props => {
       {bio && (
         <p className={styles.ContactPText}>
           I'm 31 years young and have made it to the top of every industry I
-          have had the pleasure to work in. I've drive tractor trailers,
+          have had the pleasure to work in. I've driven tractor trailers,
           excelled at marketing and communication, founded and helped maintain a
           massage therapy business, and most recently ran a startup company as
           the Lead Locksmith / Business Manager! My skills are constantly
@@ -46,8 +46,8 @@ const ContactQuickInfo = props => {
       )}
       {bio && (
         <p className={styles.ps}>
-          p.s. I'm a busy developer. There are tons of things to build and mini
-          fires to put out.{" "}
+          p.s. I'm a happily busy developer. There are tons of things to build
+          and mini fires to put out.{" "}
           <em className={styles.important}>
             I will respond to you as soon as I can!
           </em>{" "}

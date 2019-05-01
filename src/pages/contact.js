@@ -6,6 +6,7 @@ import contactImage from "../images/bgHero/tattooOffice.jpg"
 import { Section } from "../components/Section/Section.js"
 import { SectionTitle } from "../components/Section/SectionTitle.js"
 import ContactQuickInfo from "../components/ContactComponents/ContactQuickInfo.js"
+import SocialMedia from '../components/ContactComponents/SocialMedia.js'
 
 import Layout from "../components/layout.js"
 import SEO from "../components/seo.js"
@@ -29,6 +30,7 @@ const ContactPage = () => {
         <SectionTitle title="find me &#64;" message="searching for jon?" />
       </Section>
       <ContactQuickInfo />
+      <SocialMedia />
     </Layout>
   )
 }
