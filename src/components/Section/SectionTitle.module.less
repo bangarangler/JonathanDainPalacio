@@ -1,10 +1,10 @@
-@import '../../less/index.less';
+@import "../../less/index.less";
 
 .TitleWrapper {
   text-align: center;
   .message {
     font-family: @stylishText;
-    .letterSpacing (.4rem);
+    letter-spacing: 0.4rem;
     line-height: 4rem;
     font-size: 3rem;
     color: @mainGreen;
@@ -12,12 +12,17 @@
   .flexIt {
     .custom-layout(center, center);
     flex-direction: column;
+    @media only screen and (min-width: 411px) and (max-width: 731px) {
+      flex-direction: column;
+    }
     @media (min-width: 768px) {
       flex-direction: row;
     }
+
     img {
       max-width: 50px;
       max-height: 50px;
+      margin-left: 0;
       @media (min-width: 768px) {
         margin-left: 5%;
       }
@@ -25,7 +30,7 @@
   }
 
   .title {
-    .letterSpacing (.4rem);
+    letter-spacing: 0.4rem;
     font-size: 5.5rem;
     text-transform: uppercase;
     color: @mainGrey;
@@ -33,7 +38,7 @@
 
   .underline {
     width: 10rem;
-    height: .5rem;
+    height: 0.5rem;
     background: @secondaryGreen;
     margin: 1.2rem auto;
   }
