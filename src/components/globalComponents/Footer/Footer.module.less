@@ -2,31 +2,73 @@
 
 .Footer {
   padding: 2rem 0;
-  .grid(grid, 1fr, repeat(3, 1fr), 1rem);
+  .grid(grid, 1fr, repeat(3, 1fr), 1.5rem);
   place-items: center;
+  background: @mainBlack;
   grid-template-areas:
   'head'
   'social'
   'copy';
-  border: @showMe;
+  /*border: @showMe;*/
   .heading {
     grid-area: head;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 3.5rem;
+    font-family: @stylishText;
+    border: 8px solid;
+    background: linear-gradient(to bottom left, rgba(122,0,204),
+    rgba(255,26,117));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-image: linear-gradient(to bottom left, rgba(122,0,204),
+    rgba(255,26,117)) 1;
+    text-align: center;
+    padding: 1rem;
+    @media (min-width: 768px) {
+      font-size: 5.5rem;
+      line-height: 5.5rem;
+    }
   }
   .gridLink {
     grid-area: social;
     .custom-layout(space-around, center);
     width: 100%;
     margin: 0 auto;
+    @media (min-width: 768px) {
+      width: 80%;
+    }
+    @media (min-width: 992px) {
+      width: 70%;
+    }
   }
   a {
     font-size: 4rem;
     /*grid-area: social;*/
+    margin-top: 5%;
+    svg {
+
+    &:hover {
+      color: @mainPink;
+      .transition(all .5s linear);
+    }
+  }
+  }
+  .copy {
+    color: @mainPink;
+    font-size: 2rem;
+    grid-area: copy;
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+    }
   }
   .instagram {
     color: #5851db;
+    padding: 0;
   }
   .facebook {
     color: #3b5998;
+    padding: 0;
   }
   .twitter {
   color: #1da1f2;
@@ -39,8 +81,5 @@
   }
   .github {
   color: #6cc644;
-  }
-  .copy {
-    grid-area: copy;
   }
 }
