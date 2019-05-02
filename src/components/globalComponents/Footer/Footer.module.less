@@ -1,0 +1,46 @@
+@import '../../../less/index.less';
+
+.Footer {
+  padding: 2rem 0;
+  .grid(grid, 1fr, repeat(3, 1fr), 1rem);
+  place-items: center;
+  grid-template-areas:
+  'head'
+  'social'
+  'copy';
+  border: @showMe;
+  .heading {
+    grid-area: head;
+  }
+  .gridLink {
+    grid-area: social;
+    .custom-layout(space-around, center);
+    width: 100%;
+    margin: 0 auto;
+  }
+  a {
+    font-size: 4rem;
+    /*grid-area: social;*/
+  }
+  .instagram {
+    color: #5851db;
+  }
+  .facebook {
+    color: #3b5998;
+  }
+  .twitter {
+  color: #1da1f2;
+  }
+  .linkedin {
+  color: #0077b5;
+  }
+  .slack {
+  color: #cf0e5b;
+  }
+  .github {
+  color: #6cc644;
+  }
+  .copy {
+    grid-area: copy;
+  }
+}
