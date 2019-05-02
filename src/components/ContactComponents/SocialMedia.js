@@ -53,8 +53,8 @@ const SocialMedia = props => {
       text: "slack",
     },
   ]
-  const [links, setLinks] = React.useState(jpSocialInfo)
-  setLinks(...links)
+  const [links] = React.useState(jpSocialInfo)
+
   return (
     <aside className={styles.gridContainer}>
       {links.map(link => {
