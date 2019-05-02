@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "./SectionTitle.module.less"
-import topHat from "../../images/fedora-hat.svg"
+import topHat from "../../images/fedora-hat.png"
 
 export const SectionTitle = ({ title, message }) => {
   return (
