@@ -51,8 +51,10 @@ const ContactQuickInfo = props => {
       {bio && (
         <p className={styles.ps}>
           Please reach out to me via the contact method of your choice below or
-          hit the little message icon and lets chat on slak! I look forward to
-          working with you!
+          hit the little message icon and lets chat on slak!{" "}
+          <em className={styles.important}>
+            I look forward to working with you!
+          </em>
         </p>
       )}
     </section>

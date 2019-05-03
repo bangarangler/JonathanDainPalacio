@@ -9,6 +9,7 @@
   flex-direction: column;
   img {
     margin-bottom: 6%;
+    border-radius: 25px;
     @media (min-width: 768px) {
       max-height: 600px;
       min-width: 650px;
@@ -51,26 +52,39 @@
   padding: 1rem;
   color: @mainGrey;
   background: @mainGreen;
-  .border-radius(3%);
+  .border-radius(25px);
   opacity: 1;
   margin-bottom: 6%;
   @media (min-width: 768px) {
     padding: 3rem;
+    font-size: 3rem;
+    width: 80%;
+  }
+  @media (min-width: 992px) {
+    width: 70%;
   }
   }
   .ps {
     font-family: @stylishText;
     background: @mainPurple;
     opacity: .7;
-    padding: 1rem;
-    .border-radius(5%);
+    padding: 1.5rem;
+    .border-radius(25px);
     text-align: center;
     color: @mainWhite;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+    font-weight: 700;
     .letterSpacing(.2rem);
     .important {
       text-decoration: underline;
       font-weight: 700;
+    }
+    @media (min-width: 768px) {
+      font-size: 3rem;
+      width: 80%;
+    }
+    @media (min-width: 992px) {
+      width: 70%;
     }
   }
 
