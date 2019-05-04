@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { HomeHeader } from "../components/Header/Header.js"
 import Banner from "../components/Banner/Banner.js"
-//import img from "../images/bgHero/blackAndWhiteCoding.jpg"
+import img from "../images/bgHero/blackAndWhiteCoding.jpg"
 import { Section } from "../components/Section/Section.js"
 import { SectionTitle } from "../components/Section/SectionTitle.js"
 import ProjectComponent from "../components/ProjectComponent/ProjectComponent.js"
@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => (
         `fullstack developer`,
       ]}
     />
-    <HomeHeader img={data.img.edges[0].node.fluid.SVG}>
+    <HomeHeader img={img}>
       <Banner title="Jonathan Dain Palacio" subtitle="fullstack developer" />
     </HomeHeader>
     <Section>
@@ -59,15 +59,6 @@ export const query = graphql`
             childContentfulRichText {
               html
             }
-          }
-        }
-      }
-    }
-    img: allContentfulAsset(filter: { title: { eq: "blackAndWhiteCoding" } }) {
-      edges {
-        node {
-          fluid {
-            ...GatsbyContentfulFluid_tracedSVG
           }
         }
       }
