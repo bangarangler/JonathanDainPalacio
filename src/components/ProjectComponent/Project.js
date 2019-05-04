@@ -3,7 +3,7 @@ import styles from "./Project.module.less"
 import Img from "gatsby-image"
 
 const Project = node => {
-  console.log(node.project.node.id)
+  //console.log(node.project.node.id)
   const [show, setShow] = React.useState(false)
   function showProject() {
     setShow(!show)

@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 import styles from "./blogPostContentful.module.less"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout.js"
 import SEO from "../components/seo.js"

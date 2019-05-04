@@ -5,7 +5,7 @@ import { SectionTitle } from "../Section/SectionTitle.js"
 import Project from "./Project.js"
 
 const ProjectComponent = ({ projects }) => {
-  console.log(projects)
+  //console.log(projects)
   return (
     <div>
       {projects.edges.map((node, index) => {

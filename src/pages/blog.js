@@ -6,11 +6,12 @@ import { Link } from "gatsby"
 import { PageHeader } from "../components/Header/Header.js"
 import Img from "gatsby-image"
 import Banner from "../components/Banner/Banner.js"
-import blogImg from "../images/bgHero/beachHero.jpg"
+//import blogImg from "../images/bgHero/beachHero.jpg"
 import { Section } from "../components/Section/Section.js"
 import { SectionTitle } from "../components/Section/SectionTitle.js"
 import moment from "moment"
 import styles from "./Blog.module.less"
+import { graphql } from "gatsby"
 
 class BlogPage extends React.Component {
   render() {
@@ -23,7 +24,8 @@ class BlogPage extends React.Component {
           title="Blog"
           keywords={[`developer`, `portfolio`, `blog`, `web developer`]}
         />
-        <PageHeader img={blogImg}>
+        <PageHeader img={data.img.edges[0].node.fluid.src}>
+          {console.log(data.img)}
           <Banner title="web development" subtitle="whats new with coding?" />
         </PageHeader>
         <Section>
@@ -78,6 +80,15 @@ export const pageQuery = graphql`
             }
           }
           slug
+        }
+      }
+    }
+    img: allContentfulAsset(filter: { title: { eq: "beachHero" } }) {
+      edges {
+        node {
+          fluid {
+            ...GatsbyContentfulFluid_tracedSVG
+          }
         }
       }
     }
