@@ -75,7 +75,7 @@ export const pageQuery = graphql`
           postedOn
           image {
             fluid {
-              ...GatsbyContentfulFluid
+              ...GatsbyContentfulFluid_tracedSVG
             }
           }
           slug
