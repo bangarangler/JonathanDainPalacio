@@ -27,7 +27,6 @@ const ContactPage = ({ data }) => {
       <PageHeader img={contactImage}>
         <Banner title="Jon Palacio" subtitle="feel free to reach out!" />
       </PageHeader>
-      )}
       <Section>
         <SectionTitle title="find me &#64;" message="searching for jon?" />
       </Section>

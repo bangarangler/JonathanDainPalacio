@@ -1,4 +1,6 @@
 import React from "react"
+//import { StaticQuery, graphql } from "gatsby"
+//import Img from "gatsby-image"
 import styles from "./ContactQuickInfo.module.less"
 import { GoChevronDown } from "react-icons/go"
 import img from "../../images/bestFaceLOL.jpg"
