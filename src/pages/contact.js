@@ -7,6 +7,7 @@ import { Section } from "../components/Section/Section.js"
 import { SectionTitle } from "../components/Section/SectionTitle.js"
 import ContactQuickInfo from "../components/ContactComponents/ContactQuickInfo.js"
 import SocialMedia from "../components/ContactComponents/SocialMedia.js"
+import ContactForm from "../components/ContactComponents/ContactForm.js"
 //import { graphql, StaticQuery } from "gatsby"
 
 import Layout from "../components/layout.js"
@@ -32,6 +33,7 @@ const ContactPage = ({ data }) => {
       </Section>
       <ContactQuickInfo />
       <SocialMedia />
+      <ContactForm />
     </Layout>
   )
 }
