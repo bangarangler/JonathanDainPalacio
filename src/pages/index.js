@@ -8,6 +8,7 @@ import img from "../images/bgHero/blackAndWhiteCoding.jpg"
 import { Section } from "../components/Section/Section.js"
 import { SectionTitle } from "../components/Section/SectionTitle.js"
 import ProjectComponent from "../components/ProjectComponent/ProjectComponent.js"
+import Resume from "../components/Resume/Resume.js"
 
 import { graphql } from "gatsby"
 
@@ -33,6 +34,7 @@ const IndexPage = ({ data }) => (
       <SectionTitle title="grow" message="embrace failing in order to" />
     </Section>
     <ProjectComponent projects={data.projects} />
+    <Resume />
   </Layout>
 )
 
