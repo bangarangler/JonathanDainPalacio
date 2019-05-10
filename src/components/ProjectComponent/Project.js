@@ -9,16 +9,18 @@ const Project = node => {
     setShow(!show)
   }
   return (
-    <div key={node.project.node.id} className={styles.previewGrid}>
-      <h3 className={styles.projectName}>{node.project.node.projectName}</h3>
-      <Img
-        fluid={node.project.node.coverImage.fluid}
-        className={styles.coverImage}
-      />
-      <p className={styles.description}>{node.project.node.description}</p>
-      <button className={styles.previewBtn} onClick={() => showProject()}>
-        show more
-      </button>
+    <>
+      <div key={node.project.node.id} className={styles.previewGrid}>
+        <h3 className={styles.projectName}>{node.project.node.projectName}</h3>
+        <Img
+          fluid={node.project.node.coverImage.fluid}
+          className={styles.coverImage}
+        />
+        <p className={styles.description}>{node.project.node.description}</p>
+        <button className={styles.previewBtn} onClick={() => showProject()}>
+          show more
+        </button>
+      </div>
       {show && (
         <section className={styles.contentContainer}>
           <p className={styles.position}>
@@ -40,7 +42,7 @@ const Project = node => {
           }}
         />
       )}
-    </div>
+    </>
   )
 }
 
