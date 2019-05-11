@@ -9,7 +9,7 @@ import { Section } from "../components/Section/Section.js"
 import { SectionTitle } from "../components/Section/SectionTitle.js"
 import ProjectComponent from "../components/ProjectComponent/ProjectComponent.js"
 import Resume from "../components/Resume/Resume.js"
-
+import Certificate from "../components/Certificate/Certificate"
 import { graphql } from "gatsby"
 
 const IndexPage = ({ data }) => (
@@ -35,6 +35,7 @@ const IndexPage = ({ data }) => (
     </Section>
     <ProjectComponent projects={data.projects} />
     <Resume />
+    <Certificate />
   </Layout>
 )
 
