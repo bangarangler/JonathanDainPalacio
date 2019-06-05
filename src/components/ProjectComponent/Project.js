@@ -26,9 +26,15 @@ const Project = node => {
           <p className={styles.position}>
             role for project: {node.project.node.position}
           </p>
-          <p className={styles.teamMembers}>
-            we had {node.project.node.teamMembers} team members
-          </p>
+          {node.project.node.teamMembers > 1 ? (
+            <p className={styles.teamMembers}>
+              we had {node.project.node.teamMembers} team members
+            </p>
+          ) : (
+            <p className={styles.teamMembers}>
+              team members {node.project.node.teamMembers}: solo project
+            </p>
+          )}
         </section>
       )}
       {show && (
