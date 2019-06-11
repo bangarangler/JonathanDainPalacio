@@ -43,7 +43,7 @@ const ContactQuickInfo = props => {
           <img src={img} alt="Ayla and Jon Palacio" />
           <p className={styles.ContactPText}>
             My skills are constantly growing and while the top of those
-            industries where great. My heart has always been in technology and
+            industries where great, my heart has always been in technology and
             security. I'm very security focused and find software development to
             be the most fascinating and compelling journey I've been on in quite
             a long time.
@@ -53,7 +53,7 @@ const ContactQuickInfo = props => {
       {bio && (
         <p className={styles.ps}>
           Please reach out to me via the contact method of your choice below or
-          hit the little message icon and lets chat on slak!{" "}
+          hit the little message icon and lets chat on slack!{" "}
           <em className={styles.important}>
             I look forward to working with you!
           </em>
