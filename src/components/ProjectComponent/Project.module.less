@@ -52,7 +52,7 @@
     min-width: 250px;
     max-height: 250px;
     border: 2px solid @mainPurple;
-    box-shadow: 10px 5px 45px 3px;
+    box-shadow: 5px 5px 25px 1px;
     object-fit: contain;
     border-radius: 15px;
     /*margin-bottom: 5%;*/
@@ -92,6 +92,7 @@
     grid-area: btn;
     width: 50%;
     background: @mainWhite;
+    cursor: pointer;
     color: @mainPurple;
     border: 2px solid @mainPurple;
     border-radius: 10px;
@@ -99,14 +100,15 @@
     font-weight: 700;
     padding: 1%;
     text-transform: uppercase;
-    /*margin-bottom: 5%;*/
+    margin-bottom: 5%;
     .transition(all .5s ease-in-out);
     box-shadow: 2px 1px 2px 1px;
     &:hover {
       color: @mainWhite;
       background: @mainPurple;
-      border: @mainWhite;
-      box-shadow: 1px 2px 1px 2px;
+      border: 2px solid @mainWhite;
+      box-shadow: 2px 1px 2px 1px;
+      margin-bottom: 5%;
     }
     @media (min-width:992px) {
       width: 30%;
@@ -157,7 +159,7 @@
   }
 }
 .content {
-  text-align: center;
+  text-align: justify;
   .custom-layout(center, center);
   flex-direction: column;
   color: @mainBlack;
@@ -171,7 +173,7 @@
   @media (min-width: 768px) {
     width: 80%;
     margin: 0 auto;
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 4rem;
     margin-top: -5%;
   }
@@ -194,6 +196,7 @@
     font-weight: 700;
     font-family: @stylishText;
     font-size: 2.5rem;
+    text-align: center;
     .transition(all .5s linear);
     &:hover {
       color: @mainPink;
