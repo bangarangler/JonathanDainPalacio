@@ -160,6 +160,9 @@
 }
 .content {
   text-align: justify;
+  p:first-child {
+    text-align: justify;
+  }
   .custom-layout(center, center);
   flex-direction: column;
   color: @mainBlack;
@@ -168,6 +171,7 @@
   p {
   font-size: 2rem;
   padding: 5%;
+  text-align: center;
   line-height: 3rem;
   /*letter-spacing: .1rem;*/
   @media (min-width: 768px) {
@@ -186,6 +190,7 @@
     margin-top: 0;
   }
 }
+
 /*@media (min-width: 992px) {*/
   /*grid-area: prev;*/
 /*}*/
@@ -196,7 +201,7 @@
     font-weight: 700;
     font-family: @stylishText;
     font-size: 2.5rem;
-    text-align: center;
+    text-align: center !important;
     .transition(all .5s linear);
     &:hover {
       color: @mainPink;
